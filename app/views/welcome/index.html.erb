@@ -1,0 +1,29 @@
+<% if @summoner_name %>
+  <h1><%= @summoner_name %></h1>
+<% else %>
+  <h1>Hi</h1>
+<% end %>
+
+<% if @players %>
+  <ul>
+    <li><%= @players[0] %></li>
+    <li><%= @players[1] %></li>
+    <li><%= @players[2] %></li>
+    <li><%= @players[3] %></li>
+    <li><%= @players[4] %></li>
+  </ul>
+
+  <ul>
+    <li><%= @players[5] %></li>
+    <li><%= @players[6] %></li>
+    <li><%= @players[7] %></li>
+    <li><%= @players[8] %></li>
+    <li><%= @players[9] %></li>
+  </ul>
+<% end %>
+
+<% if @match_ids %>
+  <% @match_ids.each_with_index do |match_id, index| %>
+    <p><%= "#{index+1} - #{match_id}" %></p>
+  <% end %>
+<% end %>
